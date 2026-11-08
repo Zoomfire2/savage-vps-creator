@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Git
+.git/
+.gitignore
+
+# Logs
+*.log
+logs/
+
+# Tests and coverage
+test/
+tests/
+coverage/
+
+# Documentation
+README.md
+LICENSE
+
+# Development files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+.cache/
+
+# Backups
+*.bak
+*.old
+
+# SSH credentials
+*.pem
+*.key
+id_rsa
+id_ed25519
+secrets/
+credentials/
