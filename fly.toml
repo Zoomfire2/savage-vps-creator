@@ -1,16 +1,30 @@
-app = "savage-vps-creator-bot"
-primary_region = "iad"
+# fly.toml app configuration file generated for savage-vps-creator on 2026-11-08T16:39:55Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'savage-vps-creator'
+primary_region = 'ams'
 
 [build]
-  dockerfile = "Dockerfile"
+  dockerfile = 'Dockerfile'
 
 [env]
-  NODE_ENV = "production"
+  NODE_ENV = 'production'
 
 [processes]
-  app = "npm start"
+  app = 'npm start'
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
 
 [[vm]]
-  cpu_kind = "shared"
+  memory = '256mb'
+  cpu_kind = 'shared'
   cpus = 1
-  memory = "256mb"
+  memory_mb = 2048
