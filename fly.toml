@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for savage-vps-creator on 2026-11-08T16:39:55Z
+# fly.toml app configuration file generated for savage-vps-creator on 2026-11-08T16:46:24Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
 app = 'savage-vps-creator'
-primary_region = 'ams'
+primary_region = 'lhr'
 
 [build]
   dockerfile = 'Dockerfile'
