@@ -1,0 +1,20 @@
+# SAVAGE VPS CREATOR — Telegram bot app (long-polling worker, no HTTP service).
+app = 'savage-vps-creator'
+primary_region = 'lhr'
+
+[build]
+  dockerfile = 'Dockerfile'
+
+[env]
+  NODE_ENV = 'production'
+
+# No [http_service]: with auto_stop_machines the old config would stop the bot
+# whenever no HTTP traffic arrived. A polling bot must stay running.
+[processes]
+  app = 'node src/index.js'
+
+[[vm]]
+  memory = '512mb'
+  cpu_kind = 'shared'
+  cpus = 1
+  processes = ['app']
